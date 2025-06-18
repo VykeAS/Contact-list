@@ -1,0 +1,209 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido dentro del contenedor */
+}
+
+/* Títulos */
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 🔹 Grid para organizar los contactos en filas de 3 */
+.task-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    width: 100%;
+}
+
+/* 🔹 Si no hay contactos, centramos el mensaje SIN FONDO */
+.no-contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 190px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    width: 100%;
+    height: 200px; /* Ajusta la altura para centrarlo */
+}
+
+/* 🔹 Cada contacto como tarjeta */
+/* 🔹 Cada contacto como tarjeta */
+.contact-item {
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Mantiene los botones siempre en la parte inferior */
+    align-items: center;
+    min-height: 200px; /* Ajusta según el contenido de cada card */
+}
+
+/* 🔹 Evita que la tarjeta cambie de tamaño según el contenido */
+.contact-item h3 {
+    margin: 0;
+    color: #007bff;
+    font-size: 18px;
+    min-height: 40px; /* Mantiene un espacio uniforme para el nombre */
+}
+
+/* 🔹 Estilo de los textos */
+.contact-item p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+    flex-grow: 1; /* Permite que el contenido ocupe el espacio adecuado */
+}
+
+/* 🔹 Contenedor de los botones para mantenerlos fijos */
+.contact-item .button-group {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: auto; /* Empuja los botones a la parte inferior */
+}
+
+/* 🔹 Botones dentro de cada contacto */
+.contact-item button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 14px;
+}
+
+.contact-item button:hover {
+    background: #0056b3;
+}
+
+/* 🔹 Botón de eliminar con estilo especial */
+button.delete-btn {
+    background: #dc3545;
+}
+
+button.delete-btn:hover {
+    background: #c82333;
+}
+
+
+/* 🔹 Contenedor del botón "Añadir contacto" */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra el botón */
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* 🔹 Botón de Añadir */
+.button-container button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+.button-container button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* 🔹 Estilos del Formulario */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 100%;
+    align-items: center; /* Centra los inputs */
+}
+
+.form-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 400px; /* Limita el ancho */
+}
+
+.form-container button {
+    background: #28a745;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-container button:hover {
+    background: #218838;
+}
+
+.form-container button.edit-btn {
+    width: 100%;
+    background: #ffc107; /* Color amarillo dorado */
+    color: #333;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+/* 🔹 Efecto hover */
+.form-container button.edit-btn:hover {
+    background: #e0a800; /* Un tono más oscuro al pasar el mouse */
+    transform: scale(1.05);
+}
+
+/* 🔹 Efecto cuando se presiona */
+.form-container button.edit-btn:active {
+    background: #d39e00;
+    transform: scale(0.98);
+}
